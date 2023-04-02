@@ -1,18 +1,31 @@
 :root {
-    --bg : rgba(0, 0, 0, 0.904);
-    --green : rgba(0, 128, 0, 0.719);
-}
+  /* colors */
+    --bg: rgba(0, 0, 0);
+    --green: rgba(0, 128, 0, 0.719);
+    --red: #fa0015;
+    --yellow: rgba(255, 190, 11, 0.719);
 
+  /* sizes */
+  --font: clamp(8px, 1vw + 5px, 2vw);
+}
 
 * {
   padding: 0;
   margin: 0;
   color: white;
+  font-family: monospace;
+  font-size: var(--font);
+  
 }
 
 body {
   padding: 0 1%;
-  filter: saturate(.7) blur(.1px);
+  height: 100vh;
+  -webkit-filter: saturate(0.7) blur(0.1px);
+          filter: saturate(0.7) blur(0.1px);
+  background-color: var(--bg);
+  overflow: hidden;
+
 }
 
 header {
@@ -26,8 +39,9 @@ main {
 }
 
 .display {
-    
-  height: 45vh;
+  height: calc(45vh - 2rem);
+  padding: 5%;
+  padding-bottom: 0;
 }
 
 .display:nth-child(odd) {
@@ -38,6 +52,49 @@ main {
   border-bottom: 5px solid var(--green);
 }
 
-body {
-  background-color: var(--bg);
+.d4 {
+    display: flex;
 }
+
+.d4 pre:last-child {
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+footer {
+    display: flex;   
+    gap: 5px;
+    align-items: center;
+}
+
+footer div {
+    color: var(--yellow);
+    animation: color-change 1s ease infinite;
+}
+
+@keyframes color-change {
+    0% {
+        color: var(--yellow);
+    }
+    50% {
+        color: var(--green);
+    }
+    100% {
+        color: var(--yellow);
+    }
+}
+
+footer button {
+    border: 5px solid var(--bg);
+    color: var(--red);
+    background: var(--bg);
+}
+
+
