@@ -1,0 +1,43 @@
+:root {
+    --bg : rgba(0, 0, 0, 0.904);
+    --green : rgba(0, 128, 0, 0.719);
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+body {
+  padding: 0 1%;
+  filter: saturate(.7) blur(.1px);
+}
+
+header {
+  text-align: right;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 5px solid var(--green);
+}
+
+.display {
+    
+  height: 45vh;
+}
+
+.display:nth-child(odd) {
+  border-right: 5px solid var(--green);
+}
+
+.display:nth-child(-n + 2) {
+  border-bottom: 5px solid var(--green);
+}
+
+body {
+  background-color: var(--bg);
+}
