@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 :root {
-  --bg: rgba(0, 83, 0, 0.829);
-  --fg: rgb(177, 253, 0);
+  --bg: rgba(0, 83, 0, 0.8);
+  --fg: rgb(179, 255, 0);
   --fg-shadow : rgb(177, 253, 0, 0.8);
   --yellow: rgb(150, 167, 124);
   --red: red;
+}
 
-  --txt-shadow-clr: rgb(150, 167, 124);
+header img {
+  width: 30px;
+  padding: 5px 1rem;
+  cursor: pointer;
+  float: right;
+  color: var(--bg);
 }
 
 * {
@@ -36,7 +42,7 @@ body {
 }
 
 section {
-  color: rgb(177, 253, 0);
+  color: var(--fg);
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
   max-width: 100%;
   padding: 1rem 3rem 0;
