@@ -2,11 +2,77 @@
 
 :root {
   --bg: rgba(0, 83, 0, 0.8);
-  --fg: rgb(179, 255, 0);
-  --fg-shadow : rgb(177, 253, 0, 0.8);
+  --bg-start: rgba(0, 83, 0, 0.4);
+  --fg: rgb(135, 205, 0);
+  --fg-shadow: rgb(177, 253, 0, 0.8);
   --yellow: rgb(150, 167, 124);
   --red: red;
+
 }
+
+* {
+  font-family: "VT323";
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  user-select: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+
+/* Front Page */
+
+#start {
+  height: 100vh;
+  background-image: url("images/bezel.png"), url("images/scanlines.png");
+  background-size: 100% 100%;
+  background-color: var(--bg-start);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#start img {
+  width: 100vw;
+  position: absolute;
+  height: 100vh;
+  filter: blur(5px) hue-rotate(-45deg);
+  z-index: -1;
+}
+
+#start button {
+  position: absolute;
+  all: unset;
+  font-size: 4rem;
+  background-color: black;
+  padding: 2rem;
+  color: var(--fg);
+  text-shadow: 0 0 5px var(--fg-shadow);
+  cursor: pointer;
+  box-shadow: 10px 10px 0 var(--fg-shadow);
+}
+
+#start button:active {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  box-shadow: 5px 5px 0 var(--fg-shadow);
+}
+
+.slide-up {
+  animation: slide-up 1s cubic-bezier(0.42, 0, 0.58, 1) forwards ;
+}
+
+.slide-down {
+  animation: slide-down .8s cubic-bezier(0.42, 0, 0.58, 1) forwards ;
+}
+
+
+/* main page */
 
 header img {
   width: 30px;
@@ -16,20 +82,17 @@ header img {
   color: var(--bg);
 }
 
-* {
-  font-family: "VT323";
-  margin: 0;
-  padding: 0;
-  cursor: default;
-}
+#computer {
 
-body {
-  display: grid;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
+  width: 100vw;
   background-image: url("images/bezel.png"), url("images/scanlines.png");
   background-size: 100% 100%;
-
   background-color: var(--bg);
 }
 
@@ -66,7 +129,6 @@ section:last-child {
   border-left: 20px solid black;
   height: 100vh;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  z-index: -1;
 }
 
 footer {
@@ -93,14 +155,37 @@ footer button {
   font-size: 1.8rem;
   color: var(--red);
   text-shadow: 0 0 3px rgba(255, 0, 0, 0.8);
+  cursor: pointer;
 }
 
 @keyframes color-change {
-  0%, 20%, 100% {
+  0%,
+  20%,
+  100% {
     color: var(--fg);
   }
-  40%, 60%, 80% {
+  40%,
+  60%,
+  80% {
     color: var(--bg);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
   }
 }
 

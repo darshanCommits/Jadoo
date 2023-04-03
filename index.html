@@ -9,58 +9,74 @@
   </head>
 
   <body>
-  
-    <header><a href="https://github.com/greeedPNG">
-        <img src="images/github-mark-white.svg" alt="g-icon">
-    </a></header>
 
-    <main id="container">
-        
-      <section>SENDING</section>
-      <section>RECIEVING</section>
-      <div class="vertical-bar">
-        
-      </div>
-      <section></section>
-      <section>
-        <pre>
-UPLINK  =  YES
-AXIS    =  40
-INC     =  49 POS+
-DEC     =  73 NEG-
-                
-                
-SIGNAL  =  80 B            
-        </pre>
-        <pre>
-B:066
-C:067
-D:068
-E:069
-F:070
-        </pre>
-      </section>
-    </main>
+    <audio id="b" src="assets/B.mp3"></audio>
+    <audio id="c" src="assets/C.mp3"></audio>
+    <audio id="d" src="assets/D.mp3"></audio>
+    <audio id="e" src="assets/E.mp3"></audio>
+    <audio id="f" src="assets/F.mp3"></audio>
 
-    <footer>
-      <div>PRESS KEYS:&nbsp;</div>
-      <div>
-        <button>B</button>
-        <button>C</button>
-        <button>F</button>
-        <button>E</button>
-        <button>B</button>
-        <button>C</button>
-        <button>E</button>
-        <button>D</button>
-        <button>B</button>
-        <button>C</button>
-        <button>F</button>
-        <button>E</button>
-        <button>D</button>
-        <button>C</button>
-      </div>
-    </footer>
+
+    <div id="start"  >
+        <img src="images/DALL·E 2023-04-03 15.48.42(2).png" alt="bg-for-start">
+        <button id="enter">PRESS ENTER TO CONTINUE</button>
+    </div>
+
+
+    <div id="computer">
+      <header>
+        <a href="https://github.com/greeedPNG">
+          <img src="images/github-mark-white.svg" alt="g-icon" />
+        </a>
+      </header>
+
+      <main id="container">
+        <section>SENDING</section>
+        <section>RECIEVING</section>
+        <div class="vertical-bar"></div>
+        <section></section>
+        <section>
+          <pre>
+    UPLINK  =  YES
+    AXIS    =  40
+    INC     =  49 POS+
+    DEC     =  73 NEG-
+                    
+                    
+    SIGNAL  =  80 B            
+            </pre
+          >
+          <pre>
+    B:066
+    C:067
+    D:068
+    E:069
+    F:070
+            </pre
+          >
+        </section>
+      </main>
+
+      <footer>
+        <div>PRESS KEYS:&nbsp;</div>
+        <div id="sound-btn">
+          <button>B</button>
+          <button>C</button>
+          <button>F</button>
+          <button>E</button>
+          <button>B</button>
+          <button>C</button>
+          <button>E</button>
+          <button>D</button>
+          <button>B</button>
+          <button>C</button>
+          <button>F</button>
+          <button>E</button>
+          <button>D</button>
+          <button>C</button>
+        </div>
+      </footer>
+    </div>
   </body>
   <script src="app.js"></script>
 </html>
