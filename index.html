@@ -5,27 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jadoo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+    <audio id="b" src="assets/audio/B.mp3"></audio>
+    <audio id="c" src="assets/audio/C.mp3"></audio>
+    <audio id="d" src="assets/audio/D.mp3"></audio>
+    <audio id="e" src="assets/audio/E.mp3"></audio>
+    <audio id="f" src="assets/audio/F.mp3"></audio>
 
-    <audio id="b" src="assets/B.mp3"></audio>
-    <audio id="c" src="assets/C.mp3"></audio>
-    <audio id="d" src="assets/D.mp3"></audio>
-    <audio id="e" src="assets/E.mp3"></audio>
-    <audio id="f" src="assets/F.mp3"></audio>
-
-
-    <div id="start"  >
-        <img src="images/DALL·E 2023-04-03 15.48.42(2).png" alt="bg-for-start">
-        <button id="enter">PRESS ENTER TO CONTINUE</button>
+    <div id="start">
+      <img src="assets/images/Screenshot_2023-04-04-21-35-08_1366x768.png" alt="bg-for-start" />
+      <button id="enter" class="enter">PRESS ENTER TO CONTINUE</button>
     </div>
-
 
     <div id="computer">
       <header>
-        <a href="https://github.com/greeedPNG">
+        <a href="https://github.com/greeedPNG" target="_blank" rel="noopener noreferrer">
           <img src="images/github-mark-white.svg" alt="g-icon" />
         </a>
       </header>
@@ -33,30 +34,32 @@
       <main id="container">
         <section>SENDING</section>
         <section>RECIEVING</section>
-        <div class="vertical-bar"></div>
+
         <section></section>
         <section>
           <pre>
-    UPLINK  =  YES
-    AXIS    =  40
-    INC     =  49 POS+
-    DEC     =  73 NEG-
+UPLINK  =  YES
+AXIS    =  40
+INC     =  49 POS+
+DEC     =  73 NEG-
                     
                     
-    SIGNAL  =  80 B            
+SIGNAL  =  80 B            
             </pre
           >
           <pre>
-    B:066
-    C:067
-    D:068
-    E:069
-    F:070
+B:066
+C:067
+D:068
+E:069
+F:070
             </pre
           >
         </section>
       </main>
 
+      <div class="vertical-bar"></div>
+      <div class="horizontal-bar"></div>
       <footer>
         <div>PRESS KEYS:&nbsp;</div>
         <div id="sound-btn">

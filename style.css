@@ -1,21 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
+
 :root {
   --bg: rgba(0, 83, 0, 0.8);
-  --bg-start: rgba(0, 83, 0, 0.4);
   --fg: rgb(135, 205, 0);
   --fg-shadow: rgb(177, 253, 0, 0.8);
   --yellow: rgb(150, 167, 124);
   --red: red;
-
+  background-color: black;
 }
 
 * {
   font-family: "VT323";
-  margin: 0;
-  padding: 0;
   cursor: default;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
 }
 
 .hidden {
@@ -27,9 +29,6 @@
 
 #start {
   height: 100vh;
-  background-image: url("images/bezel.png"), url("images/scanlines.png");
-  background-size: 100% 100%;
-  background-color: var(--bg-start);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,13 +39,14 @@
   width: 100vw;
   position: absolute;
   height: 100vh;
-  filter: blur(5px) hue-rotate(-45deg);
+  -webkit-filter: blur(5px) hue-rotate(-45deg);
+          filter: blur(5px) hue-rotate(-45deg);
   z-index: -1;
 }
 
-#start button {
-  position: absolute;
+.enter {
   all: unset;
+  position: absolute;
   font-size: 4rem;
   background-color: black;
   padding: 2rem;
@@ -58,17 +58,27 @@
 
 #start button:active {
   position: relative;
-  top: 5px;
+  top: 5px; 
   left: 5px;
   box-shadow: 5px 5px 0 var(--fg-shadow);
 }
 
+.active {
+  position: relative !important;
+  top: 5px !important;
+  left: 5px !important; 
+  box-shadow: 5px 5px 0 var(--fg-shadow) !important;
+}
+
+
 .slide-up {
-  animation: slide-up 1s cubic-bezier(0.42, 0, 0.58, 1) forwards ;
+  -webkit-animation: slide-up 1s cubic-bezier(0.42, 0, 0.58, 1) forwards ;
+          animation: slide-up 1s cubic-bezier(0.42, 0, 0.58, 1) forwards ;
 }
 
 .slide-down {
-  animation: slide-down .8s cubic-bezier(0.42, 0, 0.58, 1) forwards ;
+  -webkit-animation: slide-down .9s cubic-bezier(0.42, 0, 0.58, 1) forwards ;
+          animation: slide-down .9s cubic-bezier(0.42, 0, 0.58, 1) forwards ;
 }
 
 
@@ -91,7 +101,7 @@ header img {
   grid-template-rows: auto 1fr auto;
   height: 100vh;
   width: 100vw;
-  background-image: url("images/bezel.png"), url("images/scanlines.png");
+  background-image: url("assets/images/bezel.png"), url("assets/images/scanlines.png");
   background-size: 100% 100%;
   background-color: var(--bg);
 }
@@ -111,8 +121,11 @@ section {
   padding: 1rem 3rem 0;
 }
 
+section:first-child {
+  padding-left: 5rem;
+}
+
 section:nth-child(-n + 2) {
-  border-bottom: 20px solid black;
   font-size: 2.5rem;
 }
 
@@ -121,14 +134,24 @@ section:last-child {
   font-size: calc(1vw + 10px);
 }
 
-.vertical-bar {
+.vertical-bar, .horizontal-bar {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-left: 20px solid black;
+  background-color: black;
+  z-index: 1;
+}
+
+.vertical-bar {
   height: 100vh;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 20px;
+
+}
+
+.horizontal-bar {
+  height: 20px;
+  width: 100vw;
 }
 
 footer {
@@ -142,20 +165,35 @@ footer div {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 2rem;
 }
 
 footer div:first-child {
-  animation: color-change 2s infinite steps(5, end);
+  -webkit-animation: color-change 2s infinite steps(5, end);
+          animation: color-change 2s infinite steps(5, end);
   color: var(--yellow);
   text-shadow: 0 0 3px rgba(60, 60, 60, 0.8);
 }
 
 footer button {
   all: unset;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--red);
   text-shadow: 0 0 3px rgba(255, 0, 0, 0.8);
   cursor: pointer;
+}
+
+@-webkit-keyframes color-change {
+  0%,
+  20%,
+  100% {
+    color: var(--fg);
+  }
+  40%,
+  60%,
+  80% {
+    color: var(--bg);
+  }
 }
 
 @keyframes color-change {
@@ -171,12 +209,30 @@ footer button {
   }
 }
 
+@-webkit-keyframes slide-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
 @keyframes slide-up {
   from {
     transform: translateY(0);
   }
   to {
     transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes slide-down {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
   }
 }
 
@@ -188,4 +244,19 @@ footer button {
     transform: translateY(0%);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
