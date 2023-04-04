@@ -14,7 +14,6 @@ function changeScreen() {
 
 btn.forEach((x) => {
   x.addEventListener("click", () => {
-    console.log(x.textContent);
     document.getElementById(x.textContent.toLowerCase()).play();
   });
 });
@@ -23,6 +22,7 @@ enter.addEventListener("click", changeScreen, { once: true });
 
 document.addEventListener("keypress", (e) => {
   const audios = ["b", "c", "d", "e", "f"];
+    let btnClicked = document.querySelector(`button:contains(${e.key})`);
 
   if (e.key === "Enter") {
     enter.classList.add("active");
@@ -32,6 +32,11 @@ document.addEventListener("keypress", (e) => {
     }, 100);
   }
 
-  if (isComputerOn && audios.includes(e.key))
+  if (isComputerOn && audios.includes(e.key)) {
     document.getElementById(e.key).play();
+    btnClicked.classList.add("active-btn");
+    setTimeout(() => {
+      btnClicked.classList.remove("active-btn");
+    }, 100);
+  }
 });

@@ -129,6 +129,7 @@ section:nth-child(-n + 2) {
   font-size: 2.5rem;
 }
 
+
 section:last-child {
   display: flex;
   font-size: calc(1vw + 10px);
@@ -181,6 +182,21 @@ footer button {
   color: var(--red);
   text-shadow: 0 0 3px rgba(255, 0, 0, 0.8);
   cursor: pointer;
+}
+
+footer button:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 5px rgba(255, 0, 0, 1);
+}
+
+footer button:active {
+  transform: scale(1);
+  text-shadow: 0 0 3px rgba(255, 0, 0, 0.8);
+}
+
+.active-btn {
+  transform: scale(1.05);
+  text-shadow: 0 0 5px rgba(255, 0, 0, 1);
 }
 
 @-webkit-keyframes color-change {

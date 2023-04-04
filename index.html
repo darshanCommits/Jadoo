@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
+    <link rel="stylesheet" href="circle.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -20,13 +21,20 @@
     <audio id="f" src="assets/audio/F.mp3"></audio>
 
     <div id="start">
-      <img src="assets/images/Screenshot_2023-04-04-21-35-08_1366x768.png" alt="bg-for-start" />
+      <img
+        src="assets/images/Screenshot_2023-04-04-21-35-08_1366x768.png"
+        alt="bg-for-start"
+      />
       <button id="enter" class="enter">PRESS ENTER TO CONTINUE</button>
     </div>
 
     <div id="computer">
       <header>
-        <a href="https://github.com/greeedPNG" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/greeedPNG"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src="images/github-mark-white.svg" alt="g-icon" />
         </a>
       </header>
@@ -35,7 +43,16 @@
         <section>SENDING</section>
         <section>RECIEVING</section>
 
-        <section></section>
+        <section id="eclipse">
+          <div class="circle outer">
+           
+          </div>
+          <div>
+            <div class="circle small small1"></div>
+            <div class="circle small small2"></div>
+          </div>
+          <div class="circle reverse-outer"></div>
+        </section>
         <section>
           <pre>
 UPLINK  =  YES
