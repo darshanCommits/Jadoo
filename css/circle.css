@@ -18,7 +18,6 @@
 .circle {
   -webkit-filter: blur(2px);
   filter: blur(2px);
-  will-change: transform;
   transform-style: preserve-3d;
   perspective: 1000px;
   outline: 5px solid var(--green);

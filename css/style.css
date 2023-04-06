@@ -72,13 +72,13 @@ body {
 }
 
 .slide-up {
-  -webkit-animation: slide-up 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
-  animation: slide-up 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+  -webkit-animation: slide-up 1s ease forwards;
+  animation: slide-up 1s ease forwards;
 }
 
 .slide-down {
-  -webkit-animation: slide-down 0.9s cubic-bezier(0.42, 0, 0.58, 1) forwards;
-  animation: slide-down 0.9s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+  -webkit-animation: slide-down .9s ease forwards;
+  animation: slide-down .9s ease forwards;
 }
 
 /* main page */
@@ -99,7 +99,7 @@ footer img {
 }
 
 #computer {
-  will-change: transform;
+  will-change: transform, ;
   display: none;
   position: absolute;
   top: 0;
