@@ -1,3 +1,5 @@
+import "./css/style.css";
+
 const bruhValue = 0.014;
 const start = document.querySelector("#start");
 const enter = document.querySelector("#enter");

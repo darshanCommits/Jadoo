@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "serve": "vite preview"
   },
+  "dependencies": {},
   "devDependencies": {
     "vite": "^4.2.0"
   }
