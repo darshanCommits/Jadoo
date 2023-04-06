@@ -9,8 +9,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
-    <link rel="stylesheet" href="circle.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/circle.css" />
+    <link rel="stylesheet" href="css/wave.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
   </head>
 
   <body>
@@ -35,23 +37,29 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="images/github-mark-white.svg" alt="g-icon" />
+          <img src="assets/images/github-mark-white.svg" alt="g-icon" />
         </a>
       </header>
 
       <main id="container">
-        <section>SENDING</section>
-        <section>RECIEVING</section>
+        <section>
+          SENDING
+          <div class="wave wave-left"></div>
+        </section>
+        <section>
+          RECIEVING
+          <div class="wave wave-right"></div>
+        </section>
 
         <section id="eclipse">
-          <div class="circle outer">
-           
-          </div>
-          <div>
+          <div class="circle big outer"></div>
+          <div class="outer-small">
             <div class="circle small small1"></div>
             <div class="circle small small2"></div>
           </div>
-          <div class="circle reverse-outer"></div>
+          <div class="circle big reverse-outer"></div>
+          <div class="circle small-outer"></div>
+          <div class="circle dot"></div>
         </section>
         <section>
           <pre>

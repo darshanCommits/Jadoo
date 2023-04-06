@@ -1,0 +1,96 @@
+:root {
+  --wide: 250px;
+  --narrow: 200px;
+  --small: 80px;
+  --green: rgb(30, 255, 98);
+}
+
+#eclipse {
+  position: relative;
+  bottom: 1rem;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.circle {
+  filter: blur(2px);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  border: 5px solid var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--green);
+}
+
+.circle.reverse-outer {
+  width: 19vw;
+  height: 29vh;
+  -webkit-animation: reverse-rotate-outer 5s linear infinite;
+  animation: reverse-rotate-outer 5s linear infinite;
+}
+
+.circle.outer {
+  width: 17vw;
+  height: 33vh;
+
+  -webkit-animation: rotate-outer 5s linear infinite;
+  animation: rotate-outer 5s linear infinite;
+}
+
+.circle.small {
+  width: var(--small);
+  height: var(--small);
+}
+
+.circle.small1 {
+  position: relative;
+  top: 45px;
+  scale: 0.5;
+  -webkit-animation: rotate 6s linear infinite;
+  animation: rotate 4s linear infinite;
+}
+
+.circle.small2 {
+  position: relative;
+  bottom: 45px;
+  -webkit-animation: rotate2 4s linear infinite;
+  animation: rotate2 4s linear infinite;
+}
+
+.small-outer {
+  width: 90px;
+  height: 90px;
+}
+
+.dot {
+  background-color: var(--green);
+  width: 1px;
+  height: 1px;
+}
+
+.dot::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--green);
+}
+.circle,
+.outer-small {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+.outer-small {
+  margin: 0 auto;
+}
+
+.small {
+  grid-area: 2 / 3 / 2 / 3;
+}

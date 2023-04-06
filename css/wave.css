@@ -1,0 +1,42 @@
+.wave {
+  width: 25vw;
+  height: 20vh;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  overflow: visible;
+  margin: 0 auto;
+}
+
+.wave-child {
+  width: 2.25vw;
+  height: 2.25vh;
+  opacity: 0.7;
+  transform-origin: top;
+  transform: rotateX(90deg);
+  animation: wave 1s infinite ease-in-out alternate;
+  box-shadow: 0 0 1px var(--green);
+}
+
+.wave-left {
+  transform: rotateX(75deg) rotateZ(-30deg);
+
+}
+
+.wave-right {
+  transform: rotateX(75deg) rotateZ(30deg) rotateY(5deg);
+
+}
+
+
+@keyframes wave {
+  0% {
+    background-color: var(--green);
+    height: 8px;
+  }
+  100% {
+    background-color: var(--bg);
+    height: 40px;
+  }
+}

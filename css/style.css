@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
-
 :root {
   --bg: rgba(0, 83, 0, 0.8);
   --fg: rgb(135, 205, 0);
@@ -14,16 +13,15 @@
   font-family: "VT323";
   cursor: default;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   overflow: hidden;
 }
 
 .hidden {
   visibility: hidden;
 }
-
 
 /* Front Page */
 
@@ -32,7 +30,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 #start img {
@@ -40,7 +37,7 @@
   position: absolute;
   height: 100vh;
   -webkit-filter: blur(5px) hue-rotate(-45deg);
-          filter: blur(5px) hue-rotate(-45deg);
+  filter: blur(5px) hue-rotate(-45deg);
   z-index: -1;
 }
 
@@ -58,7 +55,7 @@
 
 #start button:active {
   position: relative;
-  top: 5px; 
+  top: 5px;
   left: 5px;
   box-shadow: 5px 5px 0 var(--fg-shadow);
 }
@@ -66,21 +63,19 @@
 .active {
   position: relative !important;
   top: 5px !important;
-  left: 5px !important; 
+  left: 5px !important;
   box-shadow: 5px 5px 0 var(--fg-shadow) !important;
 }
 
-
 .slide-up {
-  -webkit-animation: slide-up 1s cubic-bezier(0.42, 0, 0.58, 1) forwards ;
-          animation: slide-up 1s cubic-bezier(0.42, 0, 0.58, 1) forwards ;
+  -webkit-animation: slide-up 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+  animation: slide-up 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
 }
 
 .slide-down {
-  -webkit-animation: slide-down .9s cubic-bezier(0.42, 0, 0.58, 1) forwards ;
-          animation: slide-down .9s cubic-bezier(0.42, 0, 0.58, 1) forwards ;
+  -webkit-animation: slide-down 0.9s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+  animation: slide-down 0.9s cubic-bezier(0.42, 0, 0.58, 1) forwards;
 }
-
 
 /* main page */
 
@@ -93,7 +88,6 @@ header img {
 }
 
 #computer {
-
   display: none;
   position: absolute;
   top: 0;
@@ -101,7 +95,8 @@ header img {
   grid-template-rows: auto 1fr auto;
   height: 100vh;
   width: 100vw;
-  background-image: url("assets/images/bezel.png"), url("assets/images/scanlines.png");
+  background-image: url("../assets/images/bezel.png"),
+    url("../assets/images/scanlines.png");
   background-size: 100% 100%;
   background-color: var(--bg);
 }
@@ -122,20 +117,23 @@ section {
 }
 
 section:first-child {
+
   padding-left: 5rem;
 }
 
 section:nth-child(-n + 2) {
+  display: flex;
+  flex-direction: column;
   font-size: 2.5rem;
 }
-
 
 section:last-child {
   display: flex;
   font-size: calc(1vw + 10px);
 }
 
-.vertical-bar, .horizontal-bar {
+.vertical-bar,
+.horizontal-bar {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -147,7 +145,6 @@ section:last-child {
 .vertical-bar {
   height: 100vh;
   width: 20px;
-
 }
 
 .horizontal-bar {
@@ -171,7 +168,7 @@ footer div {
 
 footer div:first-child {
   -webkit-animation: color-change 2s infinite steps(5, end);
-          animation: color-change 2s infinite steps(5, end);
+  animation: color-change 2s infinite steps(5, end);
   color: var(--yellow);
   text-shadow: 0 0 3px rgba(60, 60, 60, 0.8);
 }
@@ -198,81 +195,4 @@ footer button:active {
   transform: scale(1.05);
   text-shadow: 0 0 5px rgba(255, 0, 0, 1);
 }
-
-@-webkit-keyframes color-change {
-  0%,
-  20%,
-  100% {
-    color: var(--fg);
-  }
-  40%,
-  60%,
-  80% {
-    color: var(--bg);
-  }
-}
-
-@keyframes color-change {
-  0%,
-  20%,
-  100% {
-    color: var(--fg);
-  }
-  40%,
-  60%,
-  80% {
-    color: var(--bg);
-  }
-}
-
-@-webkit-keyframes slide-up {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes slide-up {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100%);
-  }
-}
-
-@-webkit-keyframes slide-down {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0%);
-  }
-}
-
-@keyframes slide-down {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0%);
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
