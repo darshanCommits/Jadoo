@@ -1,7 +1,7 @@
 # Jadoo
 ## Recreating Computer Scene from the movie "Koi Mil Gya".
 
-![Preview](/assets/images/preview.gif)
+![Preview](/assets/images/preview.mp4)
 
 ### Created Using vanilla Javscript and Css
 
