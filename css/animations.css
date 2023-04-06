@@ -4,7 +4,6 @@
   0% {
     scale: 0.5;
     transform: rotateX(0deg) rotateY(0deg) rotateZ(-90deg) translateZ(10px);
-    
   }
   25% {
     scale: 0.75;
@@ -142,14 +141,13 @@
 @keyframes wave {
   0% {
     background-color: var(--green);
-    height: 8px;
+    transform: scaleZ(1) rotateX(90deg) translateZ(0);
   }
   100% {
     background-color: var(--bg);
-    height: 40px;
+    transform: scaleZ(2) rotateX(-90deg) translateZ(0);
   }
 }
-
 
 /* LAYOUT */
 

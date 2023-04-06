@@ -5,83 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="wave.css" /> -->
   </head>
-
-  <style>
-  body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* wave animation */
-
-  #wave {
-    width: 30vw;
-    height: 30vh;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    justify-items: center;
-    align-items: center;
-    transform-style: preserve-3d;
-    transform: rotateX(75deg) rotateZ(-35deg);
-  }
-
-  .wave-child {
-    width: 2.5vw;
-    height: 2.5vh;
-    background-color: rgba(0, 83, 0, 0.8);
-    /* transform-origin: center; */
-    transform: translateZ(0px) rotateX(90deg);
-    border-radius: 0 0 2px 2px;
-    animation: wave 1s infinite ease-in-out alternate;
-  }
-
-  @keyframes wave {
-    0% {
-      height: 8px;
-    }
-    100% {
-      height: 40px;
-    }
-  }
-
-</style>
-
- </style>
-
   <body>
-    <div id="wave"></div>
+    <div class="hehe">
+      <p>067</p>
+    </div>
   </body>
 
   <script>
-    const bruhValue = 0.014;
-    const waveParent = document.querySelector("#wave");
-    const fragment = document.createDocumentFragment();
-    let wave;
+    const hehe = document.querySelector(".hehe");
+    const bruh = document.querySelector("p");
+    splitToSpan();
 
-    createChild(100);
+    function splitToSpan() {
+      const freagment = document.createDocumentFragment();
+      for (let i = 0; i < bruh.textContent.length; i++) {
+        const span = document.createElement("span");
+        let num = bruh.textContent.charAt(i);
 
-    function createChild(n) {
-      for (let i = 1; i <= 100; i++) {
-        const waveChild = document.createElement("div");
-        waveChild.classList.add(i);
-        waveChild.classList.add("wave-child");
-        fragment.appendChild(waveChild);
+        span.innerText = num;
+        span.classList.add(num);
+        span.classList.add("fancy");
+
+        freagment.appendChild(span);
       }
 
+      bruh.textContent = "";
+
       requestAnimationFrame(() => {
-        waveParent.appendChild(fragment);
-        wave = document.querySelectorAll(".wave-child");
-        wave.forEach((x) => {
-          let value = ([...x.classList][0] * bruhValue).toFixed(2) + "s";
-          console.log(value);
-          x.style.animationDelay = value;
+        bruh.appendChild(freagment);
+        // fancy animation
+
+        const fancyElem = document.querySelectorAll("span");
+
+        console.log(fancyElem);
+        fancyElem.forEach((x) => {
+          const fancyNum = [...x.classList][0];
+          for (let i = 0; i <= fancyNum; i++) {
+            console.log(i);
+            setTimeout(() => {
+              x.textContent = i;
+            }, 10);
+          }
         });
       });
     }
+
+    // console.log(fancyElem);
   </script>
 </html>

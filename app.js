@@ -26,8 +26,10 @@ function createChild(whichWave) {
 
   requestAnimationFrame(() => {
     whichWave.appendChild(fragment);
+
+    // Wave animation
+
     wave = document.querySelectorAll(".wave-child");
-    console.log(wave);
     wave.forEach((x) => {
       let value = ([...x.classList][0] * bruhValue).toFixed(2) + "s";
       x.style.animationDelay = value;

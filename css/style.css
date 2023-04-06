@@ -167,6 +167,7 @@ footer div {
 }
 
 footer div:first-child {
+  transform: translateZ(0);
   -webkit-animation: color-change 2s infinite steps(5, end);
   animation: color-change 2s infinite steps(5, end);
   color: var(--yellow);
