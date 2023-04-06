@@ -4,7 +4,6 @@
   --bg: rgba(0, 83, 0, 0.8);
   --fg: rgb(135, 205, 0);
   --fg-shadow: rgb(177, 253, 0, 0.8);
-  --yellow: rgb(150, 167, 124);
   --red: red;
   background-color: black;
 }
@@ -26,6 +25,7 @@
 /* Front Page */
 
 #start {
+  will-change: transform;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -54,16 +54,12 @@
 }
 
 #start button:active {
-  position: relative;
-  top: 5px;
-  left: 5px;
+  transform: translateX(5px) translateY(5px);
   box-shadow: 5px 5px 0 var(--fg-shadow);
 }
 
 .active {
-  position: relative !important;
-  top: 5px !important;
-  left: 5px !important;
+  transform: translateX(5px) translateY(5px) !important;
   box-shadow: 5px 5px 0 var(--fg-shadow) !important;
 }
 
@@ -79,15 +75,28 @@
 
 /* main page */
 
-header img {
+header {
+  
+  margin: 0 1rem 0 auto;
+  height: 50px;
+  
+}
+
+.credits {
+  margin-left: auto;
+  color: var(--red);
+}
+
+footer img {
   width: 30px;
-  padding: 5px 1rem;
   cursor: pointer;
-  float: right;
-  color: var(--bg);
+  animation: color-change 1s infinite;
+
+
 }
 
 #computer {
+  will-change: transform;
   display: none;
   position: absolute;
   top: 0;
@@ -117,7 +126,6 @@ section {
 }
 
 section:first-child {
-
   padding-left: 5rem;
 }
 
@@ -129,7 +137,7 @@ section:nth-child(-n + 2) {
 
 section:last-child {
   display: flex;
-  font-size: calc(1vw + 10px);
+  font-size: calc(1vw + 20px);
 }
 
 .vertical-bar,
@@ -167,10 +175,10 @@ footer div {
 }
 
 footer div:first-child {
-  transform: translateZ(0);
-  -webkit-animation: color-change 2s infinite steps(5, end);
-  animation: color-change 2s infinite steps(5, end);
-  color: var(--yellow);
+  /* color: var(--green); */
+  -webkit-animation: color-change 2s infinite;
+  animation: color-change 2s infinite;
+  color: var(--fg);
   text-shadow: 0 0 3px rgba(60, 60, 60, 0.8);
 }
 
@@ -196,4 +204,3 @@ footer button:active {
   transform: scale(1.05);
   text-shadow: 0 0 5px rgba(255, 0, 0, 1);
 }
-

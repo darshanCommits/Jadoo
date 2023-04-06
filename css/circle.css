@@ -18,7 +18,8 @@
 .circle {
   --green: rgba(30, 255, 98, 100);
   -webkit-filter: blur(2px);
-          filter: blur(2px);
+  filter: blur(2px);
+  will-change: transform;
   transform-style: preserve-3d;
   perspective: 1000px;
   outline: 5px solid var(--green);
@@ -29,6 +30,7 @@
 .circle.reverse-outer {
   width: 19vw;
   height: 29vh;
+  transform: perspective(400px);
   -webkit-animation: reverse-rotate-outer 5s linear infinite;
   animation: reverse-rotate-outer 5s linear infinite;
 }
@@ -36,6 +38,7 @@
 .circle.outer {
   width: 17vw;
   height: 33vh;
+  transform: perspective(400px);
   -webkit-animation: rotate-outer 5s linear infinite;
   animation: rotate-outer 5s linear infinite;
 }

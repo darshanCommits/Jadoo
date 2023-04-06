@@ -14,8 +14,9 @@
           filter: blur(1px);
   width: 2.25vw;
   height: 2.25vh;
-  opacity: 0.7;
   border-radius: 2px;
+  background-color: var(--green);
+  will-change: opacity, transform;
   -webkit-animation: wave 1s infinite ease-in-out alternate;
           animation: wave 1s infinite ease-in-out alternate;
   box-shadow: 0 0 1px var(--green);

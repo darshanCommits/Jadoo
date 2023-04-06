@@ -9,6 +9,7 @@ let wave;
 
 function buttonAnimation() {
   btnClicked.classList.add("active-btn");
+
   setTimeout(() => {
     btnClicked.classList.remove("active-btn");
   }, 100);
@@ -40,7 +41,8 @@ function createChild(whichWave) {
 function changeScreen() {
   createChild(waveParent[0]);
   createChild(waveParent[1]);
-    document.documentElement.requestFullscreen();
+  
+  document.documentElement.requestFullscreen();
   start.classList.add("slide-up");
   computer.classList.add("slide-down");
   computer.style.display = "grid";
