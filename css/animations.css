@@ -137,6 +137,20 @@
   }
 }
 
+/* WAVE */
+
+@keyframes wave {
+  0% {
+    background-color: var(--green);
+    height: 8px;
+  }
+  100% {
+    background-color: var(--bg);
+    height: 40px;
+  }
+}
+
+
 /* LAYOUT */
 
 @-webkit-keyframes color-change {
