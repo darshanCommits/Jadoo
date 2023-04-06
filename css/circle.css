@@ -16,7 +16,6 @@
 }
 
 .circle {
-  --green: rgba(30, 255, 98, 100);
   -webkit-filter: blur(2px);
   filter: blur(2px);
   will-change: transform;

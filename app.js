@@ -41,7 +41,7 @@ function createChild(whichWave) {
 function changeScreen() {
   createChild(waveParent[0]);
   createChild(waveParent[1]);
-  
+
   document.documentElement.requestFullscreen();
   start.classList.add("slide-up");
   computer.classList.add("slide-down");
