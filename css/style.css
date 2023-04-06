@@ -137,7 +137,7 @@ section:nth-child(-n + 2) {
 
 section:last-child {
   display: flex;
-  font-size: calc(1vw + 20px);
+  font-size: calc(1vw + 16px);
 }
 
 .vertical-bar,
