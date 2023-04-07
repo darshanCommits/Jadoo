@@ -75,8 +75,8 @@ body {
 }
 
 .slide-down {
-  -webkit-animation: slide-down 1s linear ;
-  animation: slide-down 1s linear ;
+  -webkit-animation: slide-down .5s linear ;
+  animation: slide-down .5s linear ;
 }
 
 /* main page */
@@ -97,7 +97,7 @@ footer img {
 }
 
 #computer {
-  will-change: opacity ;
+  will-change: transform ;
   display: none;
   position: absolute;
   top: 0;
