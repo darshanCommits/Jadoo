@@ -1,4 +1,3 @@
-
 const bruhValue = 0.014;
 const start = document.querySelector("#start");
 const enter = document.querySelector("#enter");
@@ -50,24 +49,25 @@ function enterAnim(e) {
   document.removeEventListener("keypress", enterAnim);
 }
 
-btn.forEach((x) => {
-  x.addEventListener("click", () => {
-    document.getElementById(x.textContent.toLowerCase()).play();
-  });
-});
-
 enter.addEventListener("click", changeScreen, { once: true });
 
 document.addEventListener("keypress", enterAnim);
 
 document.addEventListener("keypress", (e) => {
   const audios = ["b", "c", "d", "e", "f"];
-  if (isComputerOn && audios.includes(e.key)) {
-    document.getElementById(e.key).play();
+  const keyPressed = e.key.toLowerCase();
+  if (isComputerOn && audios.includes(keyPressed)) {
+    document.getElementById(keyPressed).play();
   }
+});
+
+btn.forEach((x) => {
+  x.addEventListener("click", () => {
+    document.getElementById(x.textContent.toLowerCase()).play();
+  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   createChild(waveParent[0]);
   createChild(waveParent[1]);
-})
+});

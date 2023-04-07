@@ -26,14 +26,11 @@ body {
   height: 100vh;
 }
 
-.hidden {
-  visibility: hidden;
-}
+
 
 /* Front Page */
 
 #start {
-  will-change: transform;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -41,6 +38,7 @@ body {
 }
 
 #start img {
+  will-change: opacity ;
   width: 100vw;
   position: absolute;
   height: 100vh;
@@ -72,13 +70,13 @@ body {
 }
 
 .slide-up {
-  -webkit-animation: slide-up 1s ease forwards;
-  animation: slide-up 1s ease forwards;
+  -webkit-animation: slide-up .5s linear forwards;
+  animation: slide-up .5s linear forwards;
 }
 
 .slide-down {
-  -webkit-animation: slide-down .9s ease forwards;
-  animation: slide-down .9s ease forwards;
+  -webkit-animation: slide-down 1s linear ;
+  animation: slide-down 1s linear ;
 }
 
 /* main page */
@@ -99,11 +97,12 @@ footer img {
 }
 
 #computer {
-  will-change: transform, ;
+  will-change: opacity ;
   display: none;
   position: absolute;
   top: 0;
   left: 0;
+  transform: rotateY(0deg);
   grid-template-rows: auto 1fr auto;
   height: 100%;
   background-image: url("../assets/images/bezel.png"),
