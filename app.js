@@ -8,45 +8,45 @@ let isComputerOn = false;
 let wave;
 
 function createChild(whichWave) {
-  const fragment = document.createDocumentFragment();
+	const fragment = document.createDocumentFragment();
 
-  for (let i = 1; i <= 100; i++) {
-    const waveChild = document.createElement("div");
-    waveChild.classList.add(i);
-    waveChild.classList.add("wave-child");
-    fragment.appendChild(waveChild);
-  }
+	for (let i = 1; i <= 100; i++) {
+		const waveChild = document.createElement("div");
+		waveChild.classList.add(i);
+		waveChild.classList.add("wave-child");
+		fragment.appendChild(waveChild);
+	}
 
-  requestAnimationFrame(() => {
-    whichWave.appendChild(fragment);
-    wave = document.querySelectorAll(".wave-child");
+	requestAnimationFrame(() => {
+		whichWave.appendChild(fragment);
+		wave = document.querySelectorAll(".wave-child");
 
-    // Wave animation
+		// Wave animation
 
-    wave.forEach((x) => {
-      let value = ([...x.classList][0] * bruhValue).toFixed(2) + "s";
-      x.style.animationDelay = value;
-    });
-  });
+		wave.forEach((x) => {
+			let value = ([...x.classList][0] * bruhValue).toFixed(2) + "s";
+			x.style.animationDelay = value;
+		});
+	});
 }
 
 function changeScreen() {
-  document.documentElement.requestFullscreen();
-  start.classList.add("slide-up");
-  computer.classList.add("slide-down");
-  computer.style.display = "grid";
-  isComputerOn = true;
+	document.documentElement.requestFullscreen();
+	start.classList.add("slide-up");
+	computer.classList.add("slide-down");
+	computer.style.display = "grid";
+	isComputerOn = true;
 }
 
 function enterAnim(e) {
-  if (e.key === "Enter") {
-    enter.classList.add("active");
-    setTimeout(() => {
-      enter.classList.remove("active");
-      changeScreen();
-    }, 100);
-  }
-  document.removeEventListener("keypress", enterAnim);
+	if (e.key === "Enter") {
+		enter.classList.add("active");
+		setTimeout(() => {
+			enter.classList.remove("active");
+			changeScreen();
+		}, 100);
+	}
+	document.removeEventListener("keypress", enterAnim);
 }
 
 enter.addEventListener("click", changeScreen, { once: true });
@@ -54,20 +54,20 @@ enter.addEventListener("click", changeScreen, { once: true });
 document.addEventListener("keypress", enterAnim);
 
 document.addEventListener("keypress", (e) => {
-  const audios = ["b", "c", "d", "e", "f"];
-  const keyPressed = e.key.toLowerCase();
-  if (isComputerOn && audios.includes(keyPressed)) {
-    document.getElementById(keyPressed).play();
-  }
+	const audios = ["b", "c", "d", "e", "f"];
+	const keyPressed = e.key.toLowerCase();
+	if (isComputerOn && audios.includes(keyPressed)) {
+		document.getElementById(keyPressed).play();
+	}
 });
 
 btn.forEach((x) => {
-  x.addEventListener("click", () => {
-    document.getElementById(x.textContent.toLowerCase()).play();
-  });
+	x.addEventListener("click", () => {
+		document.getElementById(x.textContent.toLowerCase()).play();
+	});
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  createChild(waveParent[0]);
-  createChild(waveParent[1]);
+	createChild(waveParent[0]);
+	createChild(waveParent[1]);
 });
