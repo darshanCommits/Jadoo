@@ -1,6 +1,6 @@
-@import "/css/animations.css";
-@import "/css/circle.css";
-@import "/css/wave.css";
+@import "./animations.css";
+@import "./circle.css";
+@import "./wave.css";
 
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
@@ -26,8 +26,6 @@ body {
   height: 100vh;
 }
 
-
-
 /* Front Page */
 
 #start {
@@ -38,7 +36,7 @@ body {
 }
 
 #start img {
-  will-change: opacity ;
+  will-change: opacity;
   width: 100vw;
   position: absolute;
   height: 100vh;
@@ -70,13 +68,13 @@ body {
 }
 
 .slide-up {
-  -webkit-animation: slide-up .5s linear forwards;
-  animation: slide-up .5s linear forwards;
+  -webkit-animation: slide-up 0.5s linear forwards;
+  animation: slide-up 0.5s linear forwards;
 }
 
 .slide-down {
-  -webkit-animation: slide-down .5s linear ;
-  animation: slide-down .5s linear ;
+  -webkit-animation: slide-down 0.5s linear;
+  animation: slide-down 0.5s linear;
 }
 
 /* main page */
@@ -97,7 +95,7 @@ footer img {
 }
 
 #computer {
-  will-change: transform ;
+  will-change: transform;
   display: none;
   position: absolute;
   top: 0;
